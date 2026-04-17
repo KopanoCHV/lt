@@ -1,4 +1,4 @@
-import unittest
+import unittest as ut
 
 from getbest import findTop
 
@@ -10,10 +10,10 @@ class TestGetCols(unittest.TestCase):
 	def tearDown(self): #cleans after the test
 		del self.line
 		del index
-		del mark
+		del mark_
 		
 	def test_index_and_Mark(self): #Tests if the right index and mark are returned
-		index,mark = findTop(self.line,1,2)
+		index,mark = findTop(self.line,1,2,)
 		self.assertEqual(index,0)
 		self.assertEqual(mark,80)
 	
